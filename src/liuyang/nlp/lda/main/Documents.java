@@ -69,7 +69,8 @@ public class Documents {
 					docWords[i] = newIndex;
 				} else {
 					docWords[i] = termToIndexMap.get(word);
-					termCountMap.put(word, termCountMap.get(word) + 1);
+				//	termCountMap.put(word, termCountMap.get(word) + 1);
+					termCountMap.replace(word, termCountMap.get(word) + 1);
 				}
 			}
 			words.clear();
